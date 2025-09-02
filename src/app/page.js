@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
 	const [file, setFile] = useState(null);
@@ -40,6 +41,7 @@ export default function Home() {
 	return (
 		<div style={{ padding: 24 }}>
 			<h1>S3 Upload</h1>
+			<p><Link href="/downloads">View processed downloads</Link></p>
 			<form onSubmit={handleUpload}>
 				<input
 					type="file"
